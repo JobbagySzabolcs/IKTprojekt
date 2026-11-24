@@ -31,6 +31,7 @@ class Program
 
     static void Main(string[] args)
     {
+        Console.OutputEncoding = Encoding.UTF8;
         AlaphelyzetFeltoltes();
         Console.CursorVisible = false;
         Console.Clear();
@@ -95,10 +96,12 @@ class Program
                         case 3: 
                             rajzlap[kurzoX, kurzoY] = ' ';
                             szinek[kurzoX, kurzoY] = ConsoleColor.Gray;
+                            uzenet = $"Törölve: ({kurzoX}, {kurzoY})";
                             break;
                         case 4: 
                             kurzoX = RajzlapSzelesseg / 2;
                             kurzoY = RajzlapMagassag / 2;
+                            uzenet = $"Középpont: ({kurzoX}, {kurzoY})";
                             break;
                         case 5: 
                             fut = false;
